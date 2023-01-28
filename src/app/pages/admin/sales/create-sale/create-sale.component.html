@@ -1,0 +1,66 @@
+<div>
+
+    <div class="modal-header">
+        <h4 class="modal-title">Create Stock</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <div ng-app="myApp" ng-controller="myController" class="container">
+            <form [formGroup]="createSaleForm">
+                <div class="login-container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>User</label>
+                                <select formControlName="user" class="form-control">
+
+                                    <option value="">Choose User</option>
+
+                                    <option *ngFor="let user of users" [ngValue]="user._id">
+                                        {{ user.name }}
+                                    </option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Stock</label>
+                                <select formControlName="stock" class="form-control" required>
+
+                                    <option value="">Choose Stock</option>
+
+                                    <option *ngFor="let stock of stocks" [ngValue]="stock._id">
+                                        {{ stock.name }}
+                                    </option>
+
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" name="qty" formControlName="qty" required class="form-control">
+
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" (click)="createSale()">Create</button>
+        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+
+</div>

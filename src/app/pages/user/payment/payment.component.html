@@ -1,0 +1,63 @@
+<div>
+
+    <div class="modal-header">
+        <h4 class="modal-title">Pay For  Sale</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <div ng-app="myApp" ng-controller="myController" class="container">
+<!--            <form [formGroup]="updateStockForm">-->
+                <div class="login-container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <h5>Stock Name </h5>
+                                <b>{{sale.stock.name}} </b>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <br>
+                            <div class="form-group">
+                                <h5>Amount</h5>
+                               <b> LKR {{sale.amount}} </b>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <br>
+                            <div class="form-group">
+                                <label>Credit Card Number</label>
+                                <input type="name" name="name" formControlName="card"  required class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Exp Date</label>
+                                <input type="number" name="qty" formControlName="exp" required class="form-control">
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>CSV</label>
+                                <input type="number" name="unitPrice" formControlName="cvs" required class="form-control">
+
+                            </div>
+                        </div>
+                        <br>
+
+                    </div>
+
+                </div>
+<!--            </form>-->
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="pay()">Pay</button>
+        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+
+</div>

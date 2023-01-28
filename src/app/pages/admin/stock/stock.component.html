@@ -1,0 +1,33 @@
+<div class="div">
+    <h2>Stocks</h2>
+    <br>
+    <button class="btn btn-info" (click)="createStock()"> + Create Stock </button>
+    <br>
+    <br>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of stocks">
+            <td>{{data.name}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.qty}}</td>
+            <td>{{data.unitPrice}}</td>
+        <td *ngIf="data.status !=='archived'">
+            <button class="btn btn-warning" style="margin-right: 5px" (click)="updateStock(data)"> Edit</button>
+            <button class="btn btn-danger" (click)="deleteStock(data._id)" > Delete</button>
+        </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
