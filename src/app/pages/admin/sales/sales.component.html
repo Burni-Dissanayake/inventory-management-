@@ -20,7 +20,7 @@
             <td>{{data.user.name}}</td>
             <td>{{data.stock.name}}</td>
             <td>{{data.qty}}</td>
-            <td>{{data.amount}}</td>
+            <td>LKR {{data.amount}}</td>
             <td>{{data.paymentStatus}}</td>
             <td *ngIf="data.paymentStatus !=='cancelled'">
                 <button class="btn btn-danger" (click)="cancelSale(data._id)"> Cancel</button>

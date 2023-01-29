@@ -18,7 +18,7 @@
         <tr *ngFor="let data of sales">
             <td>{{data.stock.name}}</td>
             <td>{{data.qty}}</td>
-            <td>{{data.amount}}</td>
+            <td>LKR{{data.amount}}</td>
             <td>{{data.paymentStatus}}</td>
             <td *ngIf="data.paymentStatus ==='not paid'">
                 <button class="btn btn-success" (click)="payForSale(data)"> Pay</button>

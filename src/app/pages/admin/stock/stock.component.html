@@ -19,7 +19,7 @@
             <td>{{data.name}}</td>
             <td>{{data.status}}</td>
             <td>{{data.qty}}</td>
-            <td>{{data.unitPrice}}</td>
+            <td>LKR{{data.unitPrice}}</td>
         <td *ngIf="data.status !=='archived'">
             <button class="btn btn-warning" style="margin-right: 5px" (click)="updateStock(data)"> Edit</button>
             <button class="btn btn-danger" (click)="deleteStock(data._id)" > Delete</button>
